@@ -60,18 +60,38 @@
       display: flex;
       margin-bottom: 2rem;
       width: 95%;
-      max-width: 1000px;           /* CHANGED: Added max-width for better responsiveness */
-      height: 500px;  /* double height */
+      max-width: 1000px;
+      height: 500px;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
       overflow: hidden;
+
+      /* CHANGED: Align closer to left and slant left */
+      margin-left: 1rem;
+      margin-right: auto;
+      transform: rotate(-5deg);
+      transition: transform 0.3s ease;
+    }
+
+    /* CHANGED: For right aligned menu-item, slant right and move closer to right */
+    .menu-item.right {
+      margin-left: auto;
+      margin-right: 1rem;
+      flex-direction: row-reverse;
+      transform: rotate(5deg);
+    }
+
+    /* Smooth hover effect to straighten */
+    .menu-item:hover {
+      transform: rotate(0deg);
       margin-left: auto;
       margin-right: auto;
+      transition: transform 0.3s ease;
     }
 
     .menu-item img {
-      width: 500px;   /* double width */
-      height: 500px;  /* double height */
+      width: 500px;
+      height: 500px;
       object-fit: cover;
     }
 
@@ -79,8 +99,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      flex-grow: 1;                /* CHANGED: allow menu-text to take all leftover space */
-      padding: 2rem;               /* CHANGED: added padding for better spacing */
+      flex-grow: 1;
+      padding: 2rem;
       color: white;
       background: transparent;
       text-shadow:
@@ -88,31 +108,29 @@
          1px -1px 0 #d4af37,
         -1px  1px 0 #d4af37,
          1px  1px 0 #d4af37;
-      overflow: auto;              /* CHANGED: allow scrolling if text is too long */
+      overflow: auto;
     }
 
     .menu-text span.name {
-      font-size: 2.5rem;  /* bigger name */
+      font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
     .menu-text span.description {
-      font-size: 1.2rem;  /* smaller description */
+      font-size: 1.2rem;
       font-weight: normal;
       color: #ddd;
       text-shadow: none;
-    }
-
-    .right {
-      margin-left: auto;
-      flex-direction: row-reverse;
     }
 
     @media (max-width: 768px) {
       .menu-item {
         flex-direction: column !important;
         height: auto;
+        margin-left: auto !important;   /* CHANGED: remove rotation margin on mobile */
+        margin-right: auto !important;
+        transform: rotate(0deg) !important;
       }
 
       .menu-item img {
@@ -174,10 +192,12 @@
       <img src="Caesar_Salad.jpg" alt="Caesar Salad">
       <div class="menu-text">
         <span class="name">Caesar Salad — $8</span>
-        <span class="description">Our Caesar Salad is a crisp, refreshing mix of crunchy romaine lettuce,
-          shaved Parmesan cheese, and golden garlic croutons. Tossed in a creamy, tangy dressing made from anchovies,
-          fresh lemon, and aged Parmesan, it delivers a perfect harmony of savory, zesty, and crunchy textures.
-          Each bite is a fresh and vibrant taste experience, crafted from genuine, high-quality ingredients.</span>
+        <span class="description">Our Caesar Salad starts with crisp, fresh lettuce, hand-selected for its vibrant crunch
+          and bright green color. Tossed in a creamy, perfectly balanced dressing made from a blend of anchovies, freshly
+          squeezed lemon juice, garlic, Dijon mustard, and aged Parmesan cheese, it delivers a burst of savory and tangy flavors 
+          in every bite. Golden, crunchy garlic croutons add a delightful texture contrast, while extra shavings of Parmesan finish
+          the dish with a rich, nutty depth. This salad is a harmonious blend of fresh, bold, and satisfying ingredients that come 
+          together for a timeless, refreshing experience.</span>
       </div>
     </div>
 
