@@ -60,6 +60,7 @@
       display: flex;
       margin-bottom: 2rem;
       width: 95%;
+      max-width: 1000px;           /* CHANGED: Added max-width for better responsiveness */
       height: 500px;  /* double height */
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
@@ -75,19 +76,20 @@
     }
 
     .menu-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;          /* allow menu-text to take all leftover space */
-  padding: 2rem;         /* more padding for nicer spacing */
-  color: white;
-  background: transparent;
-  text-shadow:
-    -1px -1px 0 #d4af37,
-     1px -1px 0 #d4af37,
-    -1px  1px 0 #d4af37,
-     1px  1px 0 #d4af37;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-grow: 1;                /* CHANGED: allow menu-text to take all leftover space */
+      padding: 2rem;               /* CHANGED: added padding for better spacing */
+      color: white;
+      background: transparent;
+      text-shadow:
+        -1px -1px 0 #d4af37,
+         1px -1px 0 #d4af37,
+        -1px  1px 0 #d4af37,
+         1px  1px 0 #d4af37;
+      overflow: auto;              /* CHANGED: allow scrolling if text is too long */
+    }
 
     .menu-text span.name {
       font-size: 2.5rem;  /* bigger name */
