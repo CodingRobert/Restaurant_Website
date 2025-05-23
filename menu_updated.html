@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu - Restaurant</title>
   <style>
+    /* Import Great Vibes font */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -100,10 +103,28 @@
       overflow: auto;
     }
 
+    /* UPDATED font styling with Great Vibes and wave animation */
     .menu-text span.name {
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      font-weight: normal;
+      color: #d4af37; /* gold color for luxury */
       margin-bottom: 0.5rem;
+      text-shadow:
+        0 0 5px #d4af37,
+        0 0 10px #d4af37;
+      animation: wave 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    /* subtle wave animation */
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
     }
 
     .menu-text span.description {
