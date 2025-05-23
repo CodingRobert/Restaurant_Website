@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -45,8 +45,8 @@
     }
 
     .container {
-      max-width: 1000px;
-      margin: auto;
+      /* 🟡 Removed max-width to allow boxes closer to edges */
+      width: 100%;
       padding: 2rem 1rem;
       position: relative;
       z-index: 1;
@@ -60,17 +60,20 @@
     .menu-item {
       display: flex;
       margin-bottom: 2rem;
-      width: 100%;
-      max-width: 700px;
-      height: 200px;
+      /* 🟡 Removed max-width and increased height */
+      width: 95%;
+      height: 300px;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
       overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .menu-item img {
-      width: 200px;
-      height: 200px;
+      /* 🟡 Made images larger */
+      width: 300px;
+      height: 300px;
       object-fit: cover;
     }
 
@@ -79,18 +82,24 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       position: relative;
       background: transparent;
+      /* 🟡 Added yellow text stroke */
+      text-shadow:
+        -1px -1px 0 #d4af37,
+         1px -1px 0 #d4af37,
+        -1px  1px 0 #d4af37,
+         1px  1px 0 #d4af37;
     }
 
     .menu-text span {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
+      /* 🟡 Removed background and padding, and removed overline */
+      background: none;
+      padding: 0;
       text-align: center;
-      text-decoration: overline;
-      text-decoration-color: black;
+      text-decoration: none;
     }
 
     .right {
