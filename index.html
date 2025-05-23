@@ -16,7 +16,7 @@
       height: 100%;
       font-family: Arial, sans-serif;
       color: white;
-      overflow-x: hidden;
+      overflow: hidden; /* prevent any scroll */
     }
 
     /* Navigation */
@@ -30,115 +30,4 @@
       padding: 1rem 0;
     }
     header nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    header nav ul li a:hover {
-      color: #d4af37; /* gold-ish highlight */
-    }
-
-    /* Video background */
-    .video-hero video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    /* Overlay container */
-    .video-hero .overlay {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.3); /* subtle dark overlay for text readability */
-      padding: 0 1rem;
-    }
-
-    /* Title with elegant serif */
-    .video-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 5rem;
-      letter-spacing: 2px;
-      margin: 0;
-      text-shadow: 2px 4px 6px rgba(0,0,0,0.7);
-    }
-
-    /* Subtitle */
-    .video-hero p {
-      font-size: 1.8rem;
-      margin: 0.5rem 0 2rem;
-      font-style: italic;
-      text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
-    }
-
-    /* Button style */
-    .btn {
-      padding: 0.75rem 2rem;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-      background: #d4af37; /* gold-ish */
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s;
-      box-shadow: 0 4px 8px rgba(212, 175, 55, 0.6);
-    }
-    .btn:hover {
-      background: #b8932f;
-      box-shadow: 0 6px 12px rgba(184, 147, 47, 0.8);
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .video-hero h1 {
-        font-size: 3rem;
-      }
-      .video-hero p {
-        font-size: 1.2rem;
-      }
-      .btn {
-        font-size: 1rem;
-        padding: 0.6rem 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <nav>
-      <ul>
-        <li><a href="menu_updated.html">Menu</a></li>  
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="video-hero">
-    <video autoplay muted loop playsinline>
-      <source src="pizza.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay">
-      <h1>Delicacy</h1>
-      <p>Authentic Italian Cuisine</p>
-      <a href="menu.html" target="_blank" class="btn">See Menu</a>
-    </div>
-  </section>
-
-</body>
-</html>
+      color:
