@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Delicacy Restaurant</title>
 
-  <!-- "Great Vibes" font for elegant serif title -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Base reset */
     * {
       margin: 0;
       padding: 0;
@@ -20,30 +19,7 @@
       height: 100%;
       font-family: Arial, sans-serif;
       color: white;
-      overflow-x: hidden;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      z-index: 2;
-      position: relative;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
+      overflow: hidden; /* prevent scrolling */
     }
 
     /* Hero Section */
@@ -64,6 +40,29 @@
       z-index: 0;
     }
 
+    .video-hero nav {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 2;
+      background: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
     .video-hero .overlay {
       position: relative;
       z-index: 1;
@@ -73,7 +72,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba(0, 0, 0, 0.3);
+      background: black; /* black overlay */
       padding: 0 1rem;
     }
 
@@ -124,22 +123,32 @@
         font-size: 1rem;
         padding: 0.6rem 1.5rem;
       }
+
+      .video-hero video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="menu_updated.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <section class="video-hero">
+    <!-- Video Background -->
     <video autoplay muted loop playsinline>
       <source src="pizza.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+
+    <!-- Navigation floating over the video -->
+    <nav>
+      <a href="menu_updated.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Overlay content -->
     <div class="overlay">
       <h1>Delicacy</h1>
       <p>Authentic Italian Cuisine</p>
