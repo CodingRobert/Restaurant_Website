@@ -76,13 +76,12 @@
 
     .menu-text {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;  /* stack name and description vertically */
+      justify-content: flex-start;
+      padding: 1.5rem 2rem;
       width: 100%;
-      font-size: 2.0rem;  /* half size */
-      font-weight: bold;
-      position: relative;
       background: transparent;
+      color: white;
       text-shadow:
         -1px -1px 0 #d4af37,
          1px -1px 0 #d4af37,
@@ -90,11 +89,17 @@
          1px  1px 0 #d4af37;
     }
 
-    .menu-text span {
-      background: none;
-      padding: 0;
-      text-align: center;
-      text-decoration: none;
+    .menu-text span.name {
+      font-size: 2.5rem;  /* bigger name */
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-text span.description {
+      font-size: 1.2rem;  /* smaller description */
+      font-weight: normal;
+      color: #ddd;
+      text-shadow: none;
     }
 
     .right {
@@ -138,22 +143,34 @@
     <!-- Menu Items -->
     <div class="menu-item">
       <img src="margherita_pizza.jpg" alt="Margherita Pizza">
-      <div class="menu-text"><span>Margherita Pizza — $10</span></div>
+      <div class="menu-text">
+        <span class="name">Margherita Pizza — $10</span>
+        <span class="description">Classic pizza with fresh mozzarella, basil, and tomato sauce.</span>
+      </div>
     </div>
 
     <div class="menu-item right">
       <img src="Spaghetti_Carbonara.jpg" alt="Spaghetti Carbonara">
-      <div class="menu-text"><span>Spaghetti Carbonara — $12</span></div>
+      <div class="menu-text">
+        <span class="name">Spaghetti Carbonara — $12</span>
+        <span class="description">Rich and creamy pasta with pancetta and parmesan.</span>
+      </div>
     </div>
 
     <div class="menu-item">
       <img src="Caesar_Salad.jpg" alt="Caesar Salad">
-      <div class="menu-text"><span>Caesar Salad — $8</span></div>
+      <div class="menu-text">
+        <span class="name">Caesar Salad — $8</span>
+        <span class="description">Fresh romaine lettuce with Caesar dressing and croutons.</span>
+      </div>
     </div>
 
     <div class="menu-item right">
       <img src="Tiramisu.jpg" alt="Tiramisu">
-      <div class="menu-text"><span>Tiramisu — $6</span></div>
+      <div class="menu-text">
+        <span class="name">Tiramisu — $6</span>
+        <span class="description">Classic Italian dessert with coffee-soaked ladyfingers and mascarpone.</span>
+      </div>
     </div>
 
   </div>
