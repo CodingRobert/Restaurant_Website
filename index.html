@@ -90,50 +90,41 @@
       text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
- .btn {
+.btn {
   position: relative;
-  padding: 0.8rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   font-size: 1.3rem;
-  font-weight: bold;
-  color: #333;
-  background: #fffef7; /* light paper color */
-  border: 2px solid #ccc;
-  border-radius: 6px;
+  font-weight: 700;
+  color: #d4af37;
+  background: transparent;
+  border: 2px solid #d4af37;
+  border-radius: 30px;
   cursor: pointer;
+  overflow: hidden;
   text-decoration: none;
-  box-shadow:
-    3px 3px 5px rgba(0,0,0,0.15), /* shadow for depth */
-    inset 0 0 10px #f0ead8; /* subtle texture */
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-  font-family: 'Courier New', Courier, monospace;
+  transition: color 0.4s ease;
 }
 
-/* folded corner effect */
 .btn::before {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
-  border-top: 20px solid #e2d8c0; /* folded corner color */
-  border-left: 20px solid transparent;
-  border-radius: 0 6px 0 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #d4af37;
+  transition: left 0.4s ease;
+  z-index: -1;
+  border-radius: 30px;
 }
 
-/* subtle hover lift */
 .btn:hover {
-  box-shadow:
-    6px 6px 10px rgba(0,0,0,0.25),
-    inset 0 0 15px #f0ead8;
-  transform: translateY(-3px);
+  color: #111;
 }
 
 .btn:hover::before {
   left: 0;
 }
-
-
-
-
 
     @media (max-width: 600px) {
       .overlay h1 {
