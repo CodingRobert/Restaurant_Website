@@ -66,27 +66,16 @@
       border-radius: 10px;
       overflow: hidden;
 
-      /* CHANGED: Align closer to left and slant left */
+      /* Align closer to left */
       margin-left: 1rem;
       margin-right: auto;
-      transform: rotate(-5deg);
-      transition: transform 0.3s ease;
     }
 
-    /* CHANGED: For right aligned menu-item, slant right and move closer to right */
+    /* For right aligned menu-item, move closer to right and reverse layout */
     .menu-item.right {
       margin-left: auto;
       margin-right: 1rem;
       flex-direction: row-reverse;
-      transform: rotate(5deg);
-    }
-
-    /* Smooth hover effect to straighten */
-    .menu-item:hover {
-      transform: rotate(0deg);
-      margin-left: auto;
-      margin-right: auto;
-      transition: transform 0.3s ease;
     }
 
     .menu-item img {
@@ -128,9 +117,8 @@
       .menu-item {
         flex-direction: column !important;
         height: auto;
-        margin-left: auto !important;   /* CHANGED: remove rotation margin on mobile */
+        margin-left: auto !important;
         margin-right: auto !important;
-        transform: rotate(0deg) !important;
       }
 
       .menu-item img {
