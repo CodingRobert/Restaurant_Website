@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     * {
       margin: 0;
@@ -19,25 +18,30 @@
       color: #fff;
     }
 
+    /* Ensure body scrolls when content overflows */
+    body {
+      overflow-x: hidden;
+    }
+
     /* Background video */
     .video-background {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 1rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      z-index: 1;
       position: relative;
+      z-index: 1;
     }
 
     nav a {
@@ -54,10 +58,10 @@
       max-width: 800px;
       margin: 2rem auto;
       padding: 2rem;
-      position: relative;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.6); /* optional for readability */
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
+      z-index: 1;
+      position: relative;
     }
 
     h1 {
@@ -75,7 +79,7 @@
 <body>
   <!-- Background Video -->
   <video class="video-background" autoplay muted loop playsinline>
-    <source src="restaurant_entry.mp4" type="video/mp4">
+    <source src="restaurant_entry.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
