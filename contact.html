@@ -2,30 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debug Page</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-      body {
+    body {
       background-color: #111;
       color: #fff;
       font-family: Arial, sans-serif;
       margin: 0;
     }
-   /* Background video */
+
     .video-background {
       position: fixed;
       top: 0;
@@ -60,4 +46,30 @@
       max-width: 800px;
       margin: auto;
       padding: 2rem;
+      position: relative;
+      z-index: 1;
     }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="video-background" autoplay muted loop playsinline>
+    <source src="test.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>This is a test page. If you see this, your layout is working.</p>
+  </div>
+
+</body>
+</html>
