@@ -18,20 +18,18 @@
       color: #fff;
     }
 
-    /* Ensure body scrolls when content overflows */
     body {
       overflow-x: hidden;
     }
 
-    /* Background video */
     .video-background {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
+      z-index: -1;
     }
 
     nav {
@@ -78,7 +76,7 @@
 </head>
 <body>
   <!-- Background Video -->
-  <video class="video-background" autoplay muted loop playsinline>
+  <video class="video-background" autoplay muted loop playsinline preload="auto">
     <source src="restaurant_entry.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
